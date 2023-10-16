@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Form | 2Leads</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/inputmask.min.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form action="#" class="form" id="login">
+                <h1 class="title">Регистрационная форма</h1>
+                <div class="input__box">
+                    <label>Ваше имя:</label>
+                    <input placeholder="Введите имя" type="text" class="input" id="contact-name" onkeyup="validateName()">
+                    <span id="name-error" class="error"></span>
+                </div>
+                <div class="input__box">
+                    <label>Ваш Email:</label>
+                    <input placeholder="Введите почту" type="email" class="input" id="contact-email" onkeyup="validateEmail()">
+                    <span  class="error" id="email-error"></span>
+                    <span id="icon" class="icon"></span>
+                </div>
+                <div class="input__box">
+                    <label>Ваш пароль:</label>
+                    <input placeholder="Введите пароль" type="password" class="input" id="contact-password" onkeyup="validatePassword()">
+                    <span  class="error" id="password-error"></span>
+                </div>
+                <div class="input__box">
+                    <label>Подтверждение пароля:</label>
+                    <input placeholder="Введите пароль еще раз" type="password" class="input" id="contact-passwordA" onkeyup="validatePasswordA()">
+                    <span  class="error" id="passwordA-error"></span>
+                </div>
+                <div class="input__box">
+                    <label>Ваш телефон:</label>
+                    <input placeholder="Введите телефон" type="tel" class="input" id="contact-phone">
+                    <span  class="error" id="phone-error"></span>
+                </div>
+
+                <div class="form__btns">
+
+                    <button id="btn-submit" type="submit" form="login" class="form-button__sumbit">Отправить</button>
+                    <button id="btn-reset" type="reset" class="form-button__sumbit">Сбросить</button>
+                </div>
+               <span class="error" id="submit-error"></span>
+               
+            </form>
+        </div>
+    </div>
+</body>
+</html>
