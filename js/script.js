@@ -80,12 +80,20 @@ btnReset.addEventListener('click', () => {
     submitError.innerHTML = ''
 })
 btnSubmit.addEventListener('click', () => {
-    if(validateName() || validateEmail() || validatePassword() || validatePasswordA()) {
+    if(!validateName() || !validateEmail() || validatePassword() || validatePasswordA()) {
         submitError.style.display = 'block'
-        submitError.innerHTML = 'Данные успешно отправлены!';
+        submitError.style.color = 'red';
+        submitError.innerHTML = 'Пожалуйста, исправьте ошибки';
         setTimeout(function() {
             submitError.style.display = 'none';
         }, 4500)
         return false;
     }
+    submitError.style.display = 'block'
+    submitError.style.color = 'rgb(46,138,86)'
+    submitError.innerHTML = 'Данные успешно отправлены!';
+    setTimeout(function() {
+        submitError.style.display = 'none';
+    }, 5000)
+
 })
